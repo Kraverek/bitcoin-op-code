@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "0505f5f4-06a8-4be1-8681-c0fc040aebc5",
+		"name": "bitcoin-op-code",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26399270"
+	},
+	"item": [
+		{
+			"name": "OP_CODE",
+			"item": [
+				{
+					"name": "Send OP_CAT",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"private_key\": \"7f966b62b287e8c3f47deedd7d28fcb0888a2746c0dd3fc8fb7ecaea648a98c8\",\r\n\t\"utxos\": [\r\n\t\t \"1e131aaa8fde14733573dc250558c209541cba76a101c789e2fc3aa72cb0e243:1\"\r\n\t],\r\n    \"destinations\": [{\r\n\t\t\"address\": \"tb1p0y362zc4tzj4ve7eqhg3kv8f33vu9u8kdd7uyqhky00uf8atp8gs4ztd80\",\r\n\t\t\"value\": 546\r\n\t}],\r\n\t\"fee_rate\": 1,\r\n\t\"network\": \"testnet\",\r\n    \"use_api\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/send_utxos_op_cat",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"send_utxos_op_cat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Send OP_RETURN Data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"private_key\": \"7f966b62b287e8c3f47deedd7d28fcb0888a2746c0dd3fc8fb7ecaea648a98c8\",\r\n\t\"utxos\": [\r\n\t\t \"1e131aaa8fde14733573dc250558c209541cba76a101c789e2fc3aa72cb0e243:1\"\r\n\t],\r\n    \"destinations\": [{\r\n\t\t\"address\": \"tb1p0y362zc4tzj4ve7eqhg3kv8f33vu9u8kdd7uyqhky00uf8atp8gs4ztd80\",\r\n\t\t\"value\": 546\r\n\t}],\r\n\t\"fee_rate\": 1,\r\n\t\"network\": \"testnet\",\r\n    \"use_api\": true,\r\n    \"message\": \"OP_CAT - You're a Legend in Our Codebase! 🐱 - @kraverek\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7777/send_utxos_op_return",
+							"host": [
+								"localhost"
+							],
+							"port": "7777",
+							"path": [
+								"send_utxos_op_return"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create Wallet",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"network\": \"testnet\",\r\n    \"seed\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/create_wallet",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"create_wallet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Listunspent",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"address\": \"tb1pjs8rfv2m9zcd6lm5chfupjnj87lz8lefzh4xth397gde06dpvwyqy20eef\",\r\n\t\"network\": \"testnet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/listunspent",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"listunspent"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Utxos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"private_key\": \"7f966b62b287e8c3f47deedd7d28fcb0888a2746c0dd3fc8fb7ecaea648a98c8\",\r\n\t\"utxos\": [\r\n\t\t \"1e131aaa8fde14733573dc250558c209541cba76a101c789e2fc3aa72cb0e243:1\"\r\n\t],\r\n    \"destinations\": [{\r\n\t\t\"address\": \"tb1p0y362zc4tzj4ve7eqhg3kv8f33vu9u8kdd7uyqhky00uf8atp8gs4ztd80\",\r\n\t\t\"value\": 546\r\n\t}],\r\n\t\"fee_rate\": 1,\r\n\t\"network\": \"testnet\",\r\n    \"use_api\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/send_utxos",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"send_utxos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Transaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"send_tx_hex\": \"send_tx_hex\",\r\n    \"network\": \"testnet\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:7777/send_raw_transaction",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"send_raw_transaction"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
