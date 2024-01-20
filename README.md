@@ -7,19 +7,55 @@ In the spirit of the Taproot Wizard Quantum Cats competition and to honor the Bi
 ## Installation
 
 1. Clone the repository:
-git clone [Your Repository URL]
+```
+git clone https://github.com/Kraverek/bitcoin-op-code
+cd bitcoin-op-code
+```
 2. Build the app:
+
+**Important**: Ensure you have Go version 1.21.5 or 1.21.6 installed before proceeding.
+Build the application by running:
+```
 go build
-3. Run the compiled `.exe` file:
-./bitcoin-op-code.exe
+```
+3. Run the compiled executable
 
-This fires up the server on port 7777, with all endpoints ready for action.
+Execute the following command to run the application:
+```
+./bitcoin-op-code
+```
+This will start the server on port 7777, making all endpoints available for use.
 
-4. Install Postman and import the endpoint collection to start playing with the app.
+4.  Install Postman and Import Collection
+
+Download and install Postman for interacting with the application. Import the endpoint collection from the following location to get started: **/postman/bitcoin-op-code.postman_collection.json**
 
 ## Usage Examples
 
 Interaction with the app is a breeze with Postman using the provided endpoints. You'll find features like wallet creation, listing unspent transaction outputs (UTXOs), sending UTXOs, and adding OP_CAT and OP_RETURN to transactions.
+
+## Important Note on Transaction Fees
+
+When using this application on the Bitcoin mainnet, it is crucial to set an appropriate fee rate to ensure your transactions are processed in a timely manner. The default fee rate is set to 1 sat/vB, which is generally sufficient for testnet transactions. However, this rate might not be adequate for mainnet, especially during times of high network congestion.
+
+Below is an example configuration for a transaction. Make sure to set the `"network"` to `"mainnet"` and adjust the `"fee_rate"` accordingly based on the current network conditions.
+
+```json
+{
+    "private_key": "your_private_key_here",
+    "utxos": [
+        "utxo1",
+        "utxo2"
+    ],
+    "destinations": [{
+        "address": "recipient_address",
+        "value": 546
+    }],
+    "fee_rate": 60, // Adjust this value based on current network conditions
+    "network": "mainnet",
+    "use_api": true
+}
+```
 
 ## License
 
