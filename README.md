@@ -28,3 +28,19 @@ This project rocks the MIT License. Check out the full license here: [MIT Licens
 ## Support and Collaboration
 
 Got questions or need a hand with something? I'm here to help out! If you've got some cool ideas to jazz up the project or just want to chat about potential collabs, feel free to drop a line.
+
+## Important: Caution and Safety
+
+As you explore and utilize this software, **I strongly urge you to exercise extreme caution** – particularly when it comes to dealing with real bitcoins. Here are some key points to keep in mind:
+
+- **Start with a Test Environment**: Before using the software with real bitcoins, begin by testing all its functionalities in a safe test environment, like the Bitcoin Testnet. This will allow you to understand how the system works without the risk of losing actual funds.
+
+- **Understanding Functions**: Ensure that you fully understand how each function of the software works before using it in a production environment. If in doubt, seek assistance in the documentation or ask questions in the community.
+
+- **Caution with Seeds and Private Keys**: Be especially careful when dealing with seeds and private keys. Exposing this information to third parties or losing it can lead to irreversible loss of your assets.
+
+- **Experimental Nature**: Keep in mind that the software might be of an experimental nature and is not free from potential errors. Use it at your own risk.
+
+- **Updates and Changes**: Stay updated with any software updates and changes. New versions may contain important security fixes and functionality improvements.
+
+Adhering to these guidelines can greatly enhance your safety while exploring the capabilities offered by this software. Security and risk awareness should always be your top priority!
